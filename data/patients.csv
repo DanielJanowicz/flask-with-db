@@ -1,0 +1,7 @@
+mrn,firstname,lastname,dob,hospcode,admitdate,department,fallrisk
+E94023,Sara,Smith,05/21/2000,03,09/14/2022,ER,Low
+E48733,Matt,Redkay,02/14/1999,03,09/10/2022,OR,Low
+E81630,William,Jeffries,07/19/1940,04,08/10/2022,ICU,High
+E43821,Michelle,Lanberry,11/04/1994,01,09/20/2022,4E,Medium
+E00843,Julia,Zugaj,04/11/2000,02,09/02/2022,PACU,Low
+E94023,Vito,Bambino,08/06/1997,01,09/22/2022,5N,Low

@@ -7,7 +7,8 @@ app = Flask(__name__)
 
 ## Function to call database
 def db_connection():
-    dir = os.getcwd() + '/patients.db'
+    dir = 'flask-with-db\patients.db'
+    #dir = os.getcwd() + '.\patients.db'
     print('dir', dir)
     conn = sqlite3.connect(dir)
     conn.row_factory = sqlite3.Row

@@ -20,4 +20,4 @@ df
 df.columns = ['mrn', 'firstname', 'lastname', 'dob', 'hospcode', 'admitdate', 'department', 'fallrisk']
 df
 
-df.to_csv('patients.csv', index=False)
+df.to_csv('patients.csv', index=False) ## Saving for future reference

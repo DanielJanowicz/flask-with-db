@@ -3,12 +3,12 @@ import sqlite3
 import pandas as pd
 
 ## Creating connection function
-def db_connection():
+def get_db_connection():
     conn = sqlite3.connect('patients.db')
     conn.row_factory = sqlite3.Row
     return conn
 
-db = db_connection()
+db = get_db_connection()
 patientListSql = db.execute('SELECT * FROM patient_table').fetchall()
 patientListSql
 

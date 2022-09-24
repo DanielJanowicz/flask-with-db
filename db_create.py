@@ -8,7 +8,7 @@ connect = sqlite3.connect('patients.db')
 db = connect.cursor()
 
 ## Deleting existing table(s)
-db.execute('DROP TABLE IF EXISTS patients')
+db.execute('DROP TABLE IF EXISTS patient_table')
 connect.commit()
 
 ## Creating table

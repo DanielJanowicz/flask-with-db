@@ -23,14 +23,14 @@
                 </tr>
                 {% for i in listPatients %}
                     <tr>
-                        <td> {{ i.mrn }} </td>
-                        <td> {{ i.firstname }} </td>
-                        <td> {{ i.lastName }} </td>
-                        <td> {{ i.dob }} </td>
-                        <td> {{ i.hospcode }} </td>
-                        <td> {{ i.admitdate }} </td>
-                        <td> {{ i.department }} </td>
-                        <td> {{ i.fallrisk }} </td>
+                        <td> {{ i['mrn'] }} </td>
+                        <td> {{ i['firstname'] }} </td>
+                        <td> {{ i['lastName'] }} </td>
+                        <td> {{ i['dob'] }} </td>
+                        <td> {{ i['hospcode'] }} </td>
+                        <td> {{ i['admitdate'] }} </td>
+                        <td> {{ i['department'] }} </td>
+                        <td> {{ i['fallrisk'] }} </td>
                     </tr>
                 {% endfor %}
             </table>

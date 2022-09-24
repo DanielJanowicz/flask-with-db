@@ -6,31 +6,30 @@ import os
 app = Flask(__name__)
 
 ## Function to call database
-def db_connection():
-    dir = 'flask-with-db\patients.db'
-    #dir = os.getcwd() + '.\patients.db'
-    print('dir', dir)
-    conn = sqlite3.connect(dir)
-    conn.row_factory = sqlite3.Row
+def get_db_connection():
+    dir = os.getcwd() + '/patients.db'
+    print('dir:', dir)
+    conn = sqlite3.connect(dir)  
+    conn.row_factory = sqlite3.Row  
     return conn
 
 ## Setting up the route
 
 @app.route('/')
 def index():
-    db = db_connection()
-    patientListSql = db.execute('SELECT * FROM patients').fetchall()
+    db = get_db_connection()
+    patientListSql = db.execute('SELECT * FROM patient_table').fetchall()
     db.close()
-    print('patientListSql', patientListSql)
+    print('patientListSql:', patientListSql)
     return render_template('index.html', patientList=patientListSql)
 
 @app.route('/patients')
 def patients():
-    db1 = db_connection()
-    patientListSql = db1.execute('SELECT * FROM patients').fetchall()
-    db1.close()
-    print('patientListSql', patientListSql)
-    return render_template('index.html', patientList=patientListSql)
+    conn = get_db_connection()
+    patientListSql = conn.execute('SELECT * FROM patient_table').fetchall()
+    conn.close()
+    print('patientListSql:', patientListSql)
+    return render_template('patients.html', patientList=patientListSql)
 
 ## Ports & Hosts
 if __name__ == '__main__':

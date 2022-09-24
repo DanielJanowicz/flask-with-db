@@ -10,4 +10,4 @@ Setting up a database with SQLite holding fake patient data, hosted on flask
 VM is not currently running when reviewing this assignment, refer to photos below:
 
 ![gcs index](/images/gcsindex.png)
-![gcs patients](/images/gcspatients].png)
+![gcs patients](/images/gcspatients.png)

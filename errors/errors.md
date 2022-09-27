@@ -1,4 +1,8 @@
-# Errors relating to displaying data from db
+# Legacy errors below (Fixed as of Data Display Commit)
+
+
+
+~~# Errors relating to displaying data from db~~
 
 I was able to sucessfully create and connect the database; however, I ran into an issue when running the flask application.   The database was connecting because it was printing the column names, however it wasn't displaying the data within the rows.  
 

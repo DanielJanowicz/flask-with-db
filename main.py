@@ -21,7 +21,7 @@ def index():
     patientListSql = db.execute('SELECT * FROM patient_table').fetchall()
     db.close()
     print('patientListSql:', patientListSql)
-    return render_template('index.html', patientList=patientListSql)
+    return render_template('index.html', listPatients=patientListSql)
 
 @app.route('/patients')
 def patients():
@@ -29,7 +29,7 @@ def patients():
     patientListSql = conn.execute('SELECT * FROM patient_table').fetchall()
     conn.close()
     print('patientListSql:', patientListSql)
-    return render_template('patients.html', patientList=patientListSql)
+    return render_template('patients.html', listPatients=patientListSql)
 
 ## Ports & Hosts
 if __name__ == '__main__':
